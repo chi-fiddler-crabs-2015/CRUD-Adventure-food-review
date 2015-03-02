@@ -1,3 +1,3 @@
-class City < ActiveRecord::Base
-  # Remember to create a migration!
+ class City < ActiveRecord::Base
+  has_many :restaurants
 end
