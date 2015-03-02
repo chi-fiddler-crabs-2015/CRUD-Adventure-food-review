@@ -6,8 +6,8 @@ kara = User.create(name: "Kara C.", email: "kara@gmail.com", password: "asdf", i
 end
 
 chicago = City.create(name: "Chicago")
-inspi = Restaurant.create(city: chicago, name: "Inspiration Kitchen", average_rating: 5, address: "3504 W Lake St", image_url:)
-shake = Restaurant.create(city: chicago, name: "Shake Shack", average_rating: 4, address: "66 E Ohio St.", image_url:)
+inspi = Restaurant.create(city: chicago, name: "Inspiration Kitchen", cuisine:"southern", average_rating: 5, address: "3504 W Lake St", image_url: "http://gaby.fachrul.com/img/kitchendesignwawan/kitchen-inspiration/chicago-tuesday-inspiration-kitchen-wheeler-kearns800-x-537-426-kb-jpeg-x.jpg")
+shake = Restaurant.create(city: chicago, name: "Shake Shack", cuisine:"american", average_rating: 4, address: "66 E Ohio St.", image_url: "http://s3-media1.fl.yelpcdn.com/bphoto/Uh6WjyATBEPoAJFZpvaljQ/o.jpg")
 
 
 mike.reviews.create(restaurant: shake, rating: 4, title:"YUM!", content: "Must get the Shack Stack & Cheese Fries with a Shake")
