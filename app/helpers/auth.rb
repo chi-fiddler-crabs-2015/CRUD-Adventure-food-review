@@ -6,7 +6,7 @@ helpers do
   end
 
   def logged_in
-    if session[:user_id]
+    # if session[:user_id]
   end
 
 end
