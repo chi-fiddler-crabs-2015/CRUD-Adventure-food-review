@@ -1,6 +1,9 @@
 home page:
 - will have a login form and create-user link
-- list all restaurants(will have name and image), and count of reviews
+- will list all cities(and # of restaurants)
+
+cities page
+- list all restaurants(will have name and image) of that city, and count of reviews
 
 restaurant page:
 - show restaurant attribute info
