@@ -1,5 +1,5 @@
-mike = User.create(name: "Mike C.", email: "mike@gmail.com", password: "asdf", image_url:)
-kara = User.create(name: "Kara C.", email: "kara@gmail.com", password: "asdf", image_url:)
+mike = User.create(name: "Mike C.", email: "mike@gmail.com", password: "asdf", image_url:"https://secure.gravatar.com/avatar/d16b0abb4231a24e237e1de57217fbc5.png?r=PG&d=mm&s=150")
+kara = User.create(name: "Kara C.", email: "kara@gmail.com", password: "asdf", image_url:"https://secure.gravatar.com/avatar/123129ae3e7b2698e8cbc0f6c2d6f137.png?r=PG&d=mm&s=150")
 
 10.times do
   User.create(name:Faker::Name.name, email: Faker::Internet.email, password:"1111", image_url: Faker::Avatar.image)
