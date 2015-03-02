@@ -10,10 +10,11 @@ post '/login' do
     redirect '/'
   else
     @errors = "login failed, try again."
-    erb :'user/login'
+    erb :'users/login'
   end
 end
 
 get '/logout' do
-  session.clear :user_id
+  session.delete :user_id
+  redirect '/'
 end

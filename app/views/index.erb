@@ -1,9 +1,19 @@
 <div class="container">
   <h1>NOMStopia!</h1>
   <h3>Find all the <span>noms</span> of your wildest dreams!</h3>
-  <a href='/login'>LOGIN</a>
-  <a href='/users/new'>Sign Up</a>
+  <% if current_user %>
+    <h3> Welcome, <span><%= current_user.name %></span> ! Go to your <a href="/profile">Profile</a></h3>
+  <% else %>
+    <a href='/login'>LOGIN</a>
+    <a href='/users/new'>Sign Up</a>
+  <% end %>
+  <hr>
+  <div class="city_list">
+    <ul>
+    <% @cities.each do |city| %>
+      <li><a href="/cities/<%= city.id %>"><h2><%= city.name %></h2></a># of restaurants: <%=city.restaurants.count %></li>
+    <% end %>
+    </ul>
+  </div>
 </div>
-<div class="restaurant">
 
-</div>
