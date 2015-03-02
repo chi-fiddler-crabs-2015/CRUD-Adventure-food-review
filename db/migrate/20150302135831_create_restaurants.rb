@@ -6,6 +6,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.references :city
       t.string :address
       t.string :image_url
+      t.integer :average_rating
       t.timestamps
     end
   end
