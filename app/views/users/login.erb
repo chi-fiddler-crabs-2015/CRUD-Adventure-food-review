@@ -1,0 +1,23 @@
+<div class="container">
+  <h1> Login In </h1>
+  
+  <% if @errors %>
+    <%= @errors %>
+  <% end %>
+  
+  <form action="/login" method="post">
+
+    <label for="email" >Email Address:</label>
+    <input id="email" type="text" name="email"><br>
+
+    <label for="password" >Password:</label>
+    <input id="password" type="password" name="password"><br>
+
+    <input type="submit" value="Login"/>
+  </form>
+
+</div>
+
+
+
+

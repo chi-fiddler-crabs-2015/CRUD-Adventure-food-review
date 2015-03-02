@@ -8,7 +8,9 @@ end
 chicago = City.create!(name: "Chicago")
 inspi = Restaurant.create!(city: chicago, name: "Inspiration Kitchen", cuisine:"southern", average_rating: 5, address: "3504 W Lake St", image_url: "http://gaby.fachrul.com/img/kitchendesignwawan/kitchen-inspiration/chicago-tuesday-inspiration-kitchen-wheeler-kearns800-x-537-426-kb-jpeg-x.jpg")
 shake = Restaurant.create!(city: chicago, name: "Shake Shack", cuisine:"american", average_rating: 4, address: "66 E Ohio St.", image_url: "http://s3-media1.fl.yelpcdn.com/bphoto/Uh6WjyATBEPoAJFZpvaljQ/o.jpg")
-
+goat  = Restaurant.create!(city: chicago, name: "Girl and the Goat", cuisine: "american", average_rating: 4.5, address: "809 W Randolph St", image_url: "https://willvphotography.files.wordpress.com/2011/05/girlandgoat-i.jpg")
+bars  = Restaurant.create!(city: chicago, name: "Handlebar", cusine: "vegetarian", average_rating: 4, address: "2311 W North Ave." image_url: "http://brewpublic.com/wp-content/uploads/2009/05/chicago-at-night-1-040.jpg")
+purple= Restaurant.create!(city: chicago, name: "The Purple Pig", cuisine: "mediterranean", average_rating: 4, address: "500 N Michigan Ave", image_url: "http://media-cdn.tripadvisor.com/media/photo-s/03/ba/c0/03/the-purple-pig.jpg")
 
 mike.reviews.create!(restaurant: shake, rating: 4, title:"YUM!", content: "Must get the Shack Stack & Cheese Fries with a Shake")
 kara.reviews.create!(restaurant: inspi, rating: 4, title:"BEST PLACE EVAR!", content: "My favorite restaurnt in Chicago, you have to get the shrimp & grits!")
