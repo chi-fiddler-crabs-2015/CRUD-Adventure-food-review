@@ -1,0 +1,12 @@
+home page:
+- will have a login form and create-user link
+- list all restaurants(will have name and image), and count of reviews
+
+restaurant page:
+- show restaurant attribute info
+- will show list of all reviews(title, author(with #of friends), content and rating)
+- will have a button to create a new review
+
+new review page:
+- form with review attributes
+
