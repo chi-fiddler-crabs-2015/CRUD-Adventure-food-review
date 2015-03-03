@@ -4,4 +4,3 @@ get '/cities/:city_id/restaurants/:restaurant_id' do
   @reviews = @restaurant.reviews
   erb :'/restaurants/show'
 end
-

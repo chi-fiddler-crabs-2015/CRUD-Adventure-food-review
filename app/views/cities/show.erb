@@ -7,7 +7,7 @@
   <div class="restaurant_list">
     <ul>
     <% @city.restaurants.each do |restaurant| %>
-      <li><a href="/cities/<%= @city.id %>/restaurant/<%=restaurant.id%>"><h2><%= restaurant.name %></h2></a># of reviews: <%= restaurant.reviewers.count %></li>
+      <li><a href="/cities/<%= @city.id %>/restaurants/<%=restaurant.id%>"><h2><%= restaurant.name %></h2></a># of reviews: <%= restaurant.reviewers.count %></li>
     <% end %>
     </ul>
   </div>

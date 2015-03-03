@@ -20,6 +20,16 @@ post '/users' do
 
 end
 
+get 'users/:user_id' do
+
+  if @user == current_user
+
+  else
+    redirect
+  end
+end
+
+#=========================== for later use
 # get '/users/edit' do
 
 # end

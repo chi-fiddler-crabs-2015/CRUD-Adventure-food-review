@@ -9,6 +9,9 @@ usa = ["Albuquerque", "Boston", "NYC", "Los Angeles"]
 
 usa.each do |city|
   City.create!(name: city)
+  rand(10).times do
+    Restaurant.create!(city: City.find_by(name: city), name: Faker::Company.name, cuisine: ["american", "southern", "vegetarian", "mediterranean", "chinese", "thai"].sample, average_rating: rand(1..5), address: Faker::Address.street_address, image_url: "http://lorempixel.com/400/200/food/")
+  end
 end
 
 chicago = City.create!(name: "Chicago")
@@ -25,7 +28,7 @@ mike.reviews.create!(restaurant: shake, rating: 4, title:"YUM!", content: "Must 
 kara.reviews.create!(restaurant: inspi, rating: 4, title:"BEST PLACE EVAR!", content: "My favorite restaurnt in Chicago, you have to get the shrimp & grits!")
 
 User.all.each do |user|
-  Review.create!(restaurant: Restaurant.all.sample, rating:rand(1..5), title:["Awesome Food", "DONT EAT HERE!" ,"MEH, it was okay", "Will be coming back soon"].sample, content:Faker::Lorem.paragraph )
+  Review.create!(reviewer: user, restaurant: Restaurant.all.sample, rating:rand(1..5), title:["Awesome Food", "DONT EAT HERE!" ,"MEH, it was okay", "Will be coming back soon"].sample, content:Faker::Lorem.paragraph )
 end
 
 mike.connections.create!(friend: kara)
