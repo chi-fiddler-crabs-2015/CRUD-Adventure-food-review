@@ -16,8 +16,9 @@ end
 
 get '/profile' do
   if current_user
-    @latest = current_user.reviews.last
+    @user = current_user
     @reviews = current_user.reviews
+    @latest = @reviews.last
     erb :'users/show'
   else
     redirect '/'
