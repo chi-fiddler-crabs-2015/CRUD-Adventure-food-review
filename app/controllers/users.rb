@@ -20,13 +20,11 @@ post '/users' do
 
 end
 
-get 'users/:user_id' do
-
-  if @user == current_user
-
-  else
-    redirect
-  end
+get '/users/:user_id' do
+  @user = User.find(params[:user_id])
+  @latest = @user.reviews.last
+  @reviews = @user.reviews
+  erb :'users/show'
 end
 
 #=========================== for later use

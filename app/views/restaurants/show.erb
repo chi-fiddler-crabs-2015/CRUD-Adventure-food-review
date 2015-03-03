@@ -9,7 +9,7 @@
 
   <% if @reviews %>
     <% @reviews.each do |review| %>
-    <p><%= review.reviewer.name %></p>
+    <p><a href="/users/<%= review.reviewer.id %>"><%= review.reviewer.name %></a></p>
     <p><%= review.title %></p>
     <p><%= review.rating %> stars</p>
     <p><%= review.content %></p>

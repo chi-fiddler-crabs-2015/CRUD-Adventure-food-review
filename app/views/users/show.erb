@@ -1,0 +1,49 @@
+<div class="container" >
+
+<% if @user == current_user %>
+  <h1><%= current_user.name %></h1>
+  <img src="<%= current_user.image_url %>">
+  <h3>Your Friends: <%= current_user.friends.count %></h3>
+  <h3>Latest Review: <%= @latest.restaurant.name %></h3>
+  <h3>Cuisine: <%= @latest.restaurant.cuisine %></h3>
+  <h4>Date: <%= @latest.created_at.to_date %></h4>
+  <hr>
+  <br>
+
+  <% if @reviews %>
+  <h2>Reviews: </h2>
+    <% @reviews.each do |review| %>
+    <h3><%= review.restaurant.name %></h3>
+    <p><%= review.title %></p>
+    <p><%= review.rating %> stars</p>
+    <p><%= review.content %></p>
+    <p><%= review.created_at.to_date %></p>
+    <a href="#">Edit This Review</a>
+    <hr>
+    <% end %>
+  <% end %>
+
+ <% else %>
+ <h1><%= @user.name %></h1>
+  <img src="<%= @user.image_url %>">
+  <h3>Their Friends: <%= @user.friends.count %></h3>
+  <a href="#">Make Friend!</a>
+  <h3>Latest Review: <%= @latest.restaurant.name %></h3>
+  <h3>Cuisine: <%= @latest.restaurant.cuisine %></h3>
+  <h4>Date: <%= @latest.created_at.to_date %></h4>
+  <hr>
+  <br>
+
+  <% if @reviews %>
+  <h2>Reviews: </h2>
+    <% @reviews.each do |review| %>
+    <h3><%= review.restaurant.name %></h3>
+    <p><%= review.title %></p>
+    <p><%= review.rating %> stars</p>
+    <p><%= review.content %></p>
+    <p><%= review.created_at.to_date %></p>
+    <hr>
+    <% end %>
+  <% end %>
+<% end %>
+</div>

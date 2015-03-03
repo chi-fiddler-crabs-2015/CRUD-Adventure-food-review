@@ -14,6 +14,16 @@ post '/login' do
   end
 end
 
+get '/profile' do
+  if current_user
+    @latest = current_user.reviews.last
+    @reviews = current_user.reviews
+    erb :'users/show'
+  else
+    redirect '/'
+  end
+end
+
 get '/logout' do
   session.delete :user_id
   redirect '/'
